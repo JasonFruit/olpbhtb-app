@@ -21,19 +21,14 @@ sopranoMusic = {
   \relative c'' {
     \set Score.tempoHideNote = ##t \tempo 4 = 120
     
-    \repeat volta 2 {
-      c4. bes8 aes8. g16 aes8. f16 es2 aes \bar "||"
-    }
-    \alternative {
-      {
-	bes4. bes8 aes4 bes c1 \bar "||"
-      }
-      {
-	bes4. aes8 c4 bes aes1^\markup { \small { "Fine." } } \bar "|."
-      }
-    }
+    c4. bes8 aes8. g16 aes8. f16 es2 aes \bar "||"
+    bes4. bes8 aes4 bes c1 \bar "||" \break
+    c4. bes8 aes8. g16 aes8. f16 es2 aes \bar "||" 
+    bes4. aes8 c4 bes aes1 \bar "||" \break
 
-    es'2^\markup { \small { \smallCaps "Refrain:" } }  c bes4.( aes8) f2 es4 aes c aes bes1^\markup { \small { "D.C." } } \bar "||"
+    es'2^\markup { \small { \smallCaps "Refrain:" } }  c bes4.( aes8) f2 es4 aes c aes bes1 \bar "||"
+    c4. bes8 aes8. g16 aes8. f16 es2 aes \bar "||"
+    bes4. aes8 c4 bes aes1 \bar "|."
   }
 }
 

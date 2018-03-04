@@ -5,7 +5,7 @@ from glob import glob
 with codecs.open("app-tmpl.ly", "r", "utf-8") as f:
     tmpl = f.read()
     
-for fn in glob("/home/jason/library/olpbhtb/tunes/*.ly"):
+for fn in glob("/home/jason/library/olpbhtb/tunes/peculiar/*.ly"):
     with codecs.open(fn, "r", "utf-8") as f:
         ly = f.read()
 

@@ -4,7 +4,7 @@
 
 \header {
   title=\markup {
-    Church’s Desolation (8.7.8.7.D peculiar)
+    Church’s Desolation (P.M.)
   }
   composer = \markup {
     J. T. White
@@ -21,9 +21,10 @@ sopranoMusic = {
   \relative c' {
     \set Score.tempoHideNote = ##t \tempo 4 = 120
     
-    \repeat volta 2 {
-      f2 f4 g bes2 g4( f) g4 bes c2 \bar "||"
-      bes2 d4 d c2 bes g4 f2. }
+    f2 f4 g bes2 g4( f) g4 bes c2 \bar "||"
+    bes2 d4 d c2 bes g4 f2. \bar "||"
+    f2 f4 g bes2 g4( f) g4 bes c2 \bar "||"
+    bes2 d4 d c2 bes g4 f2. \bar "||"
     bes2 c4 d f2 f d4 c bes2 \bar "||" \break
     bes2 c4 d f2 f d4 c2. \bar "||"
     bes2 c4 d f2 f d4 c bes2 \bar "||"

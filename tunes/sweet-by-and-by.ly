@@ -22,17 +22,10 @@ sopranoMusic = {
     \set Score.tempoHideNote = ##t \tempo 4 = 120
     
     \partial 4
-    \repeat volta 2 {
-      g8. a16 b4 a8 g a4 g8 e d2 r4 \bar "||"
-    }
-    \alternative {
-      {
-	g8. a16 b4 b8. b16 d4 d8. b16 a2 r4 \bar "||"
-      }
-      {
-	g8. a16 b4 a8 g a4 g8 fis g2.
-      }
-    }
+    g8. a16 b4 a8 g a4 g8 e d2 r4 \bar "||"
+    g8. a16 b4 b8. b16 d4 d8. b16 a2 r4 \bar "||"
+    g8. a16 b4 a8 g a4 g8 e d2 r4 \bar "||"
+    g8. a16 b4 a8 g a4 g8 fis g2. \bar "||" \break
     
     b8.^\markup { \smallCaps "Refrain:" } c16 d2. d8. b16 a2. \bar "||"
     a8. b16 c4 c8 c c4 b8 a b2. \bar "||"

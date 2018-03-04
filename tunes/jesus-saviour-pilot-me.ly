@@ -23,9 +23,11 @@ sopranoMusic = {
     
     \partial 4
     d8. c16 bes4. a8 \times 2/3 { c8[ bes] g } f2 \bar "||"
-    es'8. d16 d4. c8 bes a bes2^\markup { \small { "Fine." } } \bar "|." \break
+    es'8. d16 d4. c8 bes a bes2 \bar "||"
     c8. c16 c4. f,8 g f bes2 \bar "||"
-    c8. c16 c4. f,8 g f bes2^\markup {\small { "D.C. al Fine" } } \bar "||"
+    c8. c16 c4. f,8 g f bes2 \bar "||"
+    d8. c16 bes4. a8 \times 2/3 { c8[ bes] g } f2 \bar "||"
+    es'8. d16 d4. c8 bes a bes2 \bar "|."
   }
 }
 

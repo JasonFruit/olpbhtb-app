@@ -22,12 +22,14 @@ sopranoMusic = {
     \set Score.tempoHideNote = ##t \tempo 4 = 120
     
     \partial 4
-    \repeat volta 2 {
-      a4 d2 d4 cis( b) a d2 d4 fis,2 \bar "||"
-      g4 a( b) a g( fis) e d2.~ d2^\markup { \small { \smallCaps { "Fine." } } }
-    }
+    a4 d2 d4 cis( b) a d2 d4 fis,2 \bar "||"
+    g4 a( b) a g( fis) e d2.~ d2 \bar "||"
+    a'4 d2 d4 cis( b) a d2 d4 fis,2 \bar "||"
+    g4 a( b) a g( fis) e d2.~ d2 \bar "||"
     d'4 fis2 e4 d2 a4 d2 d4 d2 \bar "||"
-    d4 fis2 e4 d2 fis4 e2.~ e2^\markup { \small { "D.C." } } \bar "||"
+    d4 fis2 e4 d2 fis4 e2.~ e2 \bar "||"
+    a,4 d2 d4 cis( b) a d2 d4 fis,2 \bar "||"
+    g4 a( b) a g( fis) e d2.~ d2 \bar "|."
   }
 }
 

@@ -4,16 +4,16 @@
 
 \header {
   title=\markup {
-    Cross of Christ (C.M.D.)
+    The Cross of Christ (C.M.D.)
   }
   composer = \markup {
-    L. P. Breedlove
+    L.P. Breedlove
   }
   tagline = ##f
 }
 
 sopranoMusic = {
-  \aikenHeads
+  \aikenHeadsMinor
   \clef treble
   \key g \minor
   \autoBeamOff
@@ -22,13 +22,15 @@ sopranoMusic = {
     \set Score.tempoHideNote = ##t \tempo 4 = 120
     
     \partial 2
-    \repeat volta 2 {
-      g2 bes4 d a c8[ bes] g4 g8[ f] d4 \bar "||"
-      f8[ g] a4 c d a g2^\markup { \small { \smallCaps "Fine." } }
-    }
+    g2 bes4 d a c8[ bes] g4 g8[ f] d4 \bar "||"
+    f8[ g] a4 c d a g2 \bar "||"
+    g2 bes4 d a c8[ bes] g4 g8[ f] d4 \bar "||"
+    f8[ g] a4 c d a g2 \bar "||"
 
     c2 d4 c f e d a g \bar "||"
-    c d c f e d2^\markup { \small "D.C." } \bar "||"
+    c d c f e d2 \bar "||"
+    g,2 bes4 d a c8[ bes] g4 g8[ f] d4 \bar "||"
+    f8[ g] a4 c d a g2 \bar "|."
   }
 }
 
