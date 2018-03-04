@@ -1,0 +1,50 @@
+\version "2.18.2"
+
+#(set-global-staff-size 14)
+
+\header {
+  title=\markup {
+    Leander (C.M.D.)
+  }
+  composer = \markup {
+    Austin
+  }
+  tagline = ##f
+}
+
+sopranoMusic = {
+ \aikenHeadsMinor
+ \clef treble
+ \key a \minor
+ \autoBeamOff
+ \time 6/8
+ \relative c' {
+   \set Score.tempoHideNote = ##t \tempo 4 = 120
+   
+   \partial 8
+   e8 a4 a8 a4 a8 g4 f8 e4  \bar "||"
+   e8 a4 a8 a[ g] a b4.~ b4 \bar "||"
+   b8 c4 b8 c4 d8 e4 c8 a4  \bar "||"
+   b8 c4 d8 b[ a] g a4.~ a4  \bar "||"
+   a8 e'4 e8 e[ d] c d4 d8 d4  \bar "||"
+   b8 c4 d8 e[ d] c b4.~ b4  \bar "||"
+   e,8 a4 b8 c4 d8 e4 c8 a4  \bar "||"
+   b8 c4 d8 b[ a] g a4.~ a4  \bar "|."
+ }
+}
+
+#(set! paper-alist (cons '("phone" . (cons (* 3 in) (* 5 in))) paper-alist))
+
+\paper {
+  #(set-paper-size "phone")
+}
+
+\score {
+  <<
+    \new Staff {
+      \new Voice {
+	\sopranoMusic
+      }
+    }
+  >>
+}
