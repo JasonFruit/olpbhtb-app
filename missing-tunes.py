@@ -15,10 +15,17 @@ def tune_name_to_fn(tune):
     return fn
     
 
-tune_files = [tune_name_to_fn(row[0])
+tune_files = [os.path.join("tunes",
+                           tune_name_to_fn(row[0]))
               for row in cur.fetchall()]
 
-for fn in tune_files:
-    if not os.path.exists(os.path.join("tunes", fn)):
-        print(fn)
+actual_tune_files = glob("tunes/*.gif")
+
+for atf in actual_tune_files:
+    if atf not in tune_files:
+        os.system("rm %s" % atf)
+        
+# for fn in tune_files:
+#     if not os.path.exists(os.path.join("tunes", fn)):
+#         print(fn)
 
