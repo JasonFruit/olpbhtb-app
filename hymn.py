@@ -1,5 +1,3 @@
-import os
-
 hymn_tmpl = """*Tune: %(tune)s*
 """
 
@@ -31,7 +29,11 @@ class Hymn(object):
         self.tune = tune
         self.stanzas = []
     def to_rst(self):
-        rst = ".. image:: " + os.path.join("tunes", tune_name_to_fn(self.tune)) + "\n\n"
+
+        # we should use os.path.join here, but ReStructuredText eats
+        # Windows' backslashes, so we force unixy slashes, and that
+        # seems to work anyway
+        rst = ".. image:: " + "tunes/" + tune_name_to_fn(self.tune) + "\n\n"
 
         for i in range(len(self.stanzas)):
             rst += stanza_tmpl % {"stanza_num": str(i+1).ljust(3, " "),
