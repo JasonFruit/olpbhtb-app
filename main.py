@@ -12,10 +12,19 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.recycleview import RecycleView
 from kivy.uix.popup import Popup
+from kivy.uix.image import Image
 from hymn_rst import RstDocument
 from kivy.lang import Builder
 
 from data import HymnData
+
+def tune_name_to_fn(tune):
+    allowed = "abcdefghijklmnopqrstuvwxyz-"
+    fn = tune.lower().replace(" ", "-")
+    fn = "".join([c for c in fn
+                  if c in allowed])
+    fn += ".gif"
+    return fn
 
 about_rst = """
 About the Old-Line Primitive Baptist Hymn and Tune Book
@@ -95,10 +104,19 @@ def show_hymn_popup(num):
         data = HymnData()
         hymn = data.get_hymn(num)
         hymn_rst = RstDocument(text=hymn.to_rst())
-        hymn_rst.bind(on_ref_press = lambda *args, **kwargs: print(args, kwargs))
+
+        layout = BoxLayout(orientation="vertical")
+
+        img_rst = ".. image:: tunes/" + tune_name_to_fn(hymn.tune)
+        img = RstDocument(text=img_rst)
+        layout.add_widget(img)
+        layout.add_widget(hymn_rst)
+        
         popup = Popup(title="%s (%s) — %s" % (hymn.num, hymn.meter, hymn.author),
-                      content=hymn_rst)
+                      content=layout) #hymn_rst)
+
         popup.open()
+
     except: #PokemonError gottaCatchEmAll:
         pass
         

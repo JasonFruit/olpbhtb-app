@@ -33,7 +33,8 @@ class Hymn(object):
         # we should use os.path.join here, but ReStructuredText eats
         # Windows' backslashes, so we force unixy slashes, and that
         # seems to work anyway
-        rst = ".. image:: " + "tunes/" + tune_name_to_fn(self.tune) + "\n\n"
+        # rst = ".. image:: " + "tunes/" + tune_name_to_fn(self.tune) + "\n\n"
+        rst = ""
 
         for i in range(len(self.stanzas)):
             rst += stanza_tmpl % {"stanza_num": str(i+1).ljust(3, " "),
